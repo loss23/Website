@@ -4,11 +4,12 @@
     <h1> loserlovesradiyah.online </h1>
     <h2> Game site! </h2>
     
-    <button onmouseover="hov1()" onmouseleave="unhov1()" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Cool Button #1 </button>
+    <button onclick="cool()" onmouseover="hov1()" onmouseleave="unhov1()" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Clicked me 0 times! </button>
   </body>
 </html>
 
 <script>
+	var count = 0;
 	var object1 = document.getElementById('black');
     
     function hov1(){
@@ -17,6 +18,11 @@
     
     function unhov1(){
     	object1.style.backgroundColor="#4CAF50";
+    }
+    
+    function cool(){
+    	count ++;
+    	object1.innerHTML = "Clicked me " + count + " times!";
     }
     
 </script>
