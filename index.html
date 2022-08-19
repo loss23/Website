@@ -16,19 +16,7 @@
     		do {
      			 currentDate = Date.now();
     		} while (currentDate - date < milliseconds);
-   }
-   
-   var lastUpdate = Date.now();
-   var myInterval = setInterval(tick, 0);
-   
-   function tick() {
-      var now = Date.now();
-      var dt = now - lastUpdate;
-      lastUpdate = now;
-   
-      update(dt);
-      render(dt);
-   }
+      }
       
       function hov1(){
       	object1.style.backgroundColor="LightGreen";
@@ -40,6 +28,7 @@
       
       function cool(){
       	count++;
+         localStorage.setItem('Count', count');
       	object1.innerHTML = "Clicked me " + count + " times!";
       }
       
