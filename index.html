@@ -12,6 +12,14 @@
 	var count = 0;
 	var object1 = document.getElementById('black');
     
+    function sleep(milliseconds) {
+  		const date = Date.now();
+  		let currentDate = null;
+  		do {
+   			 currentDate = Date.now();
+  		} while (currentDate - date < milliseconds);
+	}
+    
     function hov1(){
     	object1.style.backgroundColor="LightGreen";
     }
@@ -22,7 +30,6 @@
     
     function cool(){
     	count ++;
-	sleep(200);
     	object1.innerHTML = "Clicked me " + count + " times!";
     }
     
