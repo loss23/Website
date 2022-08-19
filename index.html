@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <body style="text-align:center; background-color:DodgerBlue; color:white;">
-    <h1> loserlovesradiyah.online </h1>
-    <h2> Game site! </h2>
-    
-    <button onclick="cool()" onmouseover="hov1()" onmouseleave="unhov1()" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Clicked me 0 times! </button>
-  </body>
+   <body style="text-align:center; background-color:DodgerBlue; color:white;">
+      <h1> loserlovesradiyah.online </h1>
+      <h2> Game site! </h2>
+      <button onclick="cool()" onmouseover="hov1()" onmouseleave="unhov1()" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Clicked me 0 times! </button>
+   </body>
 </html>
-
 <script>
-	var count = 0;
-	var object1 = document.getElementById('black');
-    
-    function sleep(milliseconds) {
-  		const date = Date.now();
-  		let currentDate = null;
-  		do {
-   			 currentDate = Date.now();
-  		} while (currentDate - date < milliseconds);
-	}
-    
-    function hov1(){
-    	object1.style.backgroundColor="LightGreen";
-    }
-    
-    function unhov1(){
-    	object1.style.backgroundColor="#4CAF50";
-    }
-    
-    function cool(){
-    	count ++;
-    	object1.innerHTML = "Clicked me " + count + " times!";
-    }
-    
+   var count = 0;
+   var object1 = document.getElementById('black');
+      
+      function sleep(milliseconds) {
+    		const date = Date.now();
+    		let currentDate = null;
+    		do {
+     			 currentDate = Date.now();
+    		} while (currentDate - date < milliseconds);
+   }
+   
+   var lastUpdate = Date.now();
+   var myInterval = setInterval(tick, 0);
+   
+   function tick() {
+      var now = Date.now();
+      var dt = now - lastUpdate;
+      lastUpdate = now;
+   
+      update(dt);
+      render(dt);
+   }
+      
+      function hov1(){
+      	object1.style.backgroundColor="LightGreen";
+      }
+      
+      function unhov1(){
+      	object1.style.backgroundColor="#4CAF50";
+      }
+      
+      function cool(){
+      	count ++;
+      	object1.innerHTML = "Clicked me " + count + " times!";
+      }
+      
 </script>
