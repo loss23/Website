@@ -26,7 +26,7 @@ function cool(t) {
 }
 
 function Scripts() {
-    location.href = "Scripts.html";
+    location.href = "https://discord.gg/V6n4xYRHvf";
 }
 
 function Tetris() {
