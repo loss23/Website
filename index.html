@@ -3,12 +3,14 @@
    <head>
       <title> RADIYAH IS SO HOT </title>
       <link rel="icon" type="image/x-icon" href="/Screenshot_20220722-191614_Instagram.ico">
-      <meta name="viewport" content="width=device-width, initial-scale=.8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <body style="text-align:center; background-color:DodgerBlue; color:white;">
       <h1> loserandradzforever.site </h1>
       <h2> Game site! </h2>
       <button onclick="cool()" onmouseover="hov1()" onmouseleave="unhov1()" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Clicked me 0 times! </button>
+      
+       <button onmouseover="hov1(this)" onmouseleave="unhov1(this)" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Nothing yet! </button>
    </body>
 </html>
 <script>
@@ -23,12 +25,12 @@
     		} while (currentDate - date < milliseconds);
       }
       
-      function hov1(){
-      	object1.style.backgroundColor="LightGreen";
+      function hov1(t){
+      	t.style.backgroundColor="LightGreen";
       }
       
-      function unhov1(){
-      	object1.style.backgroundColor="#4CAF50";
+      function unhov1(t){
+      	t.style.backgroundColor="#4CAF50";
       }
       
       function cool(){
