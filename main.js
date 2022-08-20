@@ -1,5 +1,4 @@
 var count = 0;
-var object1 = document.getElementById('black');
 
 function sleep(milliseconds) {
     const date = Date.now();
@@ -17,13 +16,13 @@ function unhov1(t) {
     t.style.backgroundColor = "#4CAF50";
 }
 
-function cool() {
+function cool(t) {
     if (count >= 100) {
         count = 0
         alert("You reached 100!");
     }
     count++;
-    object1.innerHTML = "Clicked me " + count + " times!";
+    t.innerHTML = "Clicked me " + count + " times!";
 }
 
 function Scripts() {
