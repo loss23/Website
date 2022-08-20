@@ -10,7 +10,7 @@
       <h2> Game site! </h2>
       <button onclick="cool()" onmouseover="hov1(this)" onmouseleave="unhov1(this)" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Clicked me 0 times! </button>
       
-       <button onmouseover="hov1(this)" onmouseleave="unhov1(this)" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Nothing yet! </button>
+       <button onclick="Scripts()" onmouseover="hov1(this)" onmouseleave="unhov1(this)" id='black' style="background-color: #4CAF50; /* Green */ border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 25px; cursor: pointer;"> Nothing yet! </button>
    </body>
 </html>
 <script>
@@ -41,5 +41,9 @@
       	count++;
       	object1.innerHTML = "Clicked me " + count + " times!";
       }
+   
+   function scripts(){
+      Window.location = Window.location+"/Scripts";
+   }
       
 </script>
