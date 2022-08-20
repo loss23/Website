@@ -28,3 +28,7 @@ function cool(t) {
 function Scripts() {
     location.href = "Scripts.html";
 }
+
+function Tetris() {
+    location.href = "Tetris.html";
+}
