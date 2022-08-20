@@ -27,5 +27,5 @@ function cool() {
 }
 
 function Scripts() {
-    location.href = "Scripts.html
+    location.href = "Scripts.html";
 }
