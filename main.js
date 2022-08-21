@@ -32,7 +32,3 @@ function Scripts() {
 function Tetris() {
     location.href = "Tetris.html";
 }
-
-document.querySelector( "#retrobg-sun" ).onclick = () => {
-  document.querySelector( "#retrobg" ).classList.toggle( "retrobg-shutdown" );
-};
