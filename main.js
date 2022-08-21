@@ -13,7 +13,7 @@ function hov1(t) {
 }
 
 function unhov1(t) {
-    t.style.backgroundColor = "#4CAF50";
+    t.style.backgroundColor = "Green";
 }
 
 function cool(t) {
