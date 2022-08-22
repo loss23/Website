@@ -45,3 +45,8 @@ function WeBecome(){
 	location.href = "WeBecome"	
 }
 
+
+function Isaac(){
+	location.href = "Isaac/the-binding-of-isaac-js-master/"	
+}
+
