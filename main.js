@@ -36,3 +36,7 @@ function Tetris() {
 function Game_List() {
 	location.href = "game_list.html"	
 }
+
+function Cookie_Clicker(){
+	location.href = "Cookie_clicker"	
+}
