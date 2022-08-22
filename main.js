@@ -40,3 +40,8 @@ function Game_List() {
 function Cookie_Clicker(){
 	location.href = "Cookie_clicker"	
 }
+
+function WeBecome(){
+	location.href = "WeBecome"	
+}
+
