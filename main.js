@@ -49,9 +49,3 @@ function WeBecome(){
 function Isaac(){
 	location.href = "Isaac/the-binding-of-isaac-js-master/"	
 }
-
-
-function LastTrain(){
-	location.href = "LastTrainHome"	
-}
-
