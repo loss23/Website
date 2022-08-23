@@ -25,10 +25,6 @@ function cool(t) {
     t.innerHTML = "Clicked me " + count + " times!";
 }
 
-function Scripts() {
-    location.href = "https://discord.gg/V6n4xYRHvf";
-}
-
 function Tetris() {
     location.href = "Tetris.html";
 }
@@ -41,8 +37,8 @@ function Cookie_Clicker(){
 	location.href = "Cookie_clicker"	
 }
 
-function WeBecome(){
-	location.href = "WeBecome"	
+function Banana_Clicker(){
+	location.href = "BananaClicker"	
 }
 
 
