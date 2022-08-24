@@ -8,11 +8,11 @@ function itemCollision(obj){
 }
 
 //items
-var treasurePool = [""];
-var bossPool = ["Wooden Spoon","The Belt","Wire Coat Hanger","MEAT!","Dessert","Dinner","Lunch","Jesus Juice","Mom's Underwear","Boom!","<3","Speed Ball","Magic Mushroom","The Halo","Max's Head","Number One","Tooth Picks","Wiggle Worm","The Inner Eye","Mom's Lipstick","Roid Rage","Growth Hormones","Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard","The Sad Onion","Rotten Meat","Breakfast","Mom's Heels","Wooden Spoon","The Belt","Wire Coat Hanger","MEAT!","Dessert","Dinner","Lunch","Jesus Juice","Mom's Underwear"];
-var secretPool = ["Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard","Boom!","<3","Speed Ball","Magic Mushroom","The Halo","Max's Head","Number One","Tooth Picks","Wiggle Worm","The Inner Eye","Mom's Lipstick","Roid Rage","Growth Hormones","Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard","The Sad Onion","Rotten Meat","Breakfast","Mom's Heels","Wooden Spoon","The Belt","Wire Coat Hanger","MEAT!","Dessert","Dinner","Lunch","Jesus Juice","Mom's Underwear"];
-var sacriPool = ["Boom!","<3","Speed Ball","Magic Mushroom","The Halo","Max's Head","Number One","Tooth Picks","Wiggle Worm","The Inner Eye","Mom's Lipstick","Roid Rage","Growth Hormones","Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard","The Sad Onion","Rotten Meat","Breakfast","Mom's Heels","Wooden Spoon","The Belt","Wire Coat Hanger","MEAT!","Dessert","Dinner","Lunch","Jesus Juice","Mom's Underwear"];
-var chestPool = ["Boom!","<3","Speed Ball","Magic Mushroom","The Halo","Max's Head","Number One","Tooth Picks","Wiggle Worm","The Inner Eye","Mom's Lipstick","Roid Rage","Growth Hormones","Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard","The Sad Onion","Rotten Meat","Breakfast","Mom's Heels","Wooden Spoon","The Belt","Wire Coat Hanger","MEAT!","Dessert","Dinner","Lunch","Jesus Juice","Mom's Underwear"];
+var treasurePool = ["Boom!","<3","Speed Ball","Magic Mushroom","The Halo","Max's Head","Number One","Tooth Picks","Wiggle Worm","The Inner Eye"];
+var bossPool = ["Wooden Spoon","The Belt","Wire Coat Hanger","MEAT!","Dessert","Dinner","Lunch","Jesus Juice","Mom's Underwear"];
+var secretPool = ["Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard"];
+var sacriPool = ["The Sad Onion","Rotten Meat","Breakfast","Mom's Heels"];
+var chestPool = ["Mom's Lipstick","Roid Rage","Growth Hormones","Pyro","Skeleton Key","Raw Liver","Mini Mushroom","Bucket of Lard"];
 var shopPool = ["The Compass","Treasure Map"];
 var pickupPool = ["Key","Bomb","Heart","Soul Heart","Half Heart"];
 
