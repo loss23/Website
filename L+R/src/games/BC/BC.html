@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="src/Banana.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Clicker</title>
+</head>
+
+<body onunload="Page_Refresh()" style="text-align: center; background-color: rgb(255, 233, 111); background-image: url('src/bckg.jfif');">
+
+    <h1 style="text-align: left; color: rgb(255, 0, 0);">Banana Clicker</h1>
+    
+    <h2 id="score_count" style="color: aliceblue;">0 Bananas</h2>
+    <h3 id="click_count" style="color: aliceblue;">1 Per Click</h3>
+
+    <button onmousedown="data_wipe()" >Data Wipe</button>
+
+    <div></div>
+
+    <img src="src/Banana.png" onclick="BananaGain(this)"></img>
+
+    <div></div>
+
+    <button id="upgrade" onmousedown="add_clicks()" onmouseover="Hov(this)" onmouseleave="unHov(this)" style="border-radius: 5px; border:2px; border-color:black; background-color:aquamarine; cursor:pointer;"> +1 Per Click - 25 </button>
+
+    <div></div>
+
+    <button id="upgrade2" onmousedown="add_mult()" onmouseover="Hov(this)" onmouseleave="unHov(this)" style="border-radius: 5px; border:2px; border-color:black; background-color:aquamarine; cursor:pointer;">  2x - 1500 </button>
+
+    <div></div>
+
+    <button id="upgrade3" onmousedown="add_mult2()" onmouseover="Hov(this)" onmouseleave="unHov(this)" style="border-radius: 5px; border:2px; border-color:black; background-color:aquamarine; cursor:pointer;">  25x - 250000 </button>
+
+    
+</body>
+
+</html>
+
+<script>
+
+    var score_count = document.getElementById('score_count');
+    var click_count = document.getElementById('click_count');
+
+    var upgrade_button = document.getElementById('upgrade');
+    var upgrade_button2 = document.getElementById('upgrade2');
+    var upgrade_button3 = document.getElementById('upgrade3');
+
+    var score = 0;
+    var ban_per = 1;
+    var mult = 1;
+    var upgrade1_price = 25;
+    var upgrade2_price = 1500;
+    var upgrade3_price = 250000;
+
+    if (localStorage.getItem("score")){
+        score = parseInt(localStorage.getItem("score")) || 0
+        ban_per = parseInt(localStorage.getItem("ban_per")) || 1
+        upgrade1_price = parseInt(localStorage.getItem("upgrade1_price")) || 25
+        upgrade2_price = parseInt(localStorage.getItem("upgrade2_price")) || 1500
+    }else{
+        localStorage.setItem("score",score.toString())
+        localStorage.setItem("ban_per",ban_per.toString())
+        localStorage.setItem("upgrade1_price",upgrade1_price.toString())
+        localStorage.setItem("upgrade2_price",upgrade2_price.toString())
+    }
+
+    click_count.innerHTML = ban_per.toString() + " Bananas Per Click"
+    score_count.innerHTML = score.toString() + " Bananas";
+    upgrade_button.innerHTML = "+1 Per Click - " + upgrade1_price;
+    upgrade_button2.innerHTML = "2x - " + upgrade2_price;
+
+    function BananaGain(t){
+        score += ban_per * mult;
+        score_count.innerHTML = score.toString() + " Bananas";
+    }
+
+    function Page_Refresh(){
+        localStorage.setItem("score",score);
+        localStorage.setItem("ban_per",ban_per);
+        localStorage.setItem("upgrade1_price",upgrade1_price);
+        localStorage.setItem("upgrade2_price",upgrade2_price);
+    }
+
+    function Hov(t){
+        t.style = "border-radius: 5px; border:2px; border-color:black; background-color:cyan; cursor:pointer;"
+    }
+    
+    function unHov(t){
+        t.style = "border-radius: 5px; border:2px; border-color:black; background-color:aquamarine; cursor:auto;''"
+    }
+
+    function add_clicks(){
+        if (score >= upgrade1_price){
+            ban_per ++;
+            score -= upgrade1_price;
+            upgrade1_price += upgrade1_price;
+            upgrade_button.innerHTML = "+1 Per Click - " + upgrade1_price;
+            score_count.innerHTML = score.toString() + " Bananas";
+            click_count.innerHTML = ban_per.toString() + " Bananas Per Click"
+        }
+    }
+
+    function add_mult(){
+        if (score >= upgrade2_price){
+            mult ++;
+            score -= upgrade2_price;
+            upgrade2_price += upgrade2_price;
+            upgrade_button2.innerHTML = "2x - " + upgrade2_price;
+            score_count.innerHTML = score.toString() + " Bananas";
+        }
+    }
+
+    function add_mult2(){
+        if (score >= upgrade3_price){
+            mult += 25;
+            score -= upgrade3_price;
+            upgrade3_price += upgrade3_price * 5;
+            upgrade_button3.innerHTML = "25x - " + upgrade3_price;
+            score_count.innerHTML = score.toString() + " Bananas";
+        }
+    }
+
+    function data_wipe(){
+        score = 0;
+        upgrade1_price = 25;
+        upgrade2_price = 1500;
+        ban_per = 1;
+        mult = 1;
+
+        window.location.href = window.location.href;
+    }
+
+</script>
