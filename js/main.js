@@ -5,7 +5,7 @@ function hov(t){
 }
 
 function unhov(t){
-    t.style = "border-radius: 5px; font-size: 25px; font-family: cursive; border-color:black; background-color:violet; color:gray;"
+    t.style = "border-radius: 5px; font-size: 25px; font-family: cursive; border-color:black; background-color:purple; color:gray;"
 }
 
 function Tetris(){
