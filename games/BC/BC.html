@@ -61,11 +61,15 @@
         ban_per = parseInt(localStorage.getItem("ban_per")) || 1
         upgrade1_price = parseInt(localStorage.getItem("upgrade1_price")) || 25
         upgrade2_price = parseInt(localStorage.getItem("upgrade2_price")) || 1500
+        upgrade3_price = parseInt("upgrade3_price",localStorage.getItem("upgrade3_price")) || 250000
+        mult =   parseInt("mult",localStorage.getItem("mult")) || 1
     }else{
         localStorage.setItem("score",score.toString())
         localStorage.setItem("ban_per",ban_per.toString())
         localStorage.setItem("upgrade1_price",upgrade1_price.toString())
         localStorage.setItem("upgrade2_price",upgrade2_price.toString())
+        localStorage.setItem("upgrade3_price",upgrade3_price.toString());
+        localStorage.setItem("mult",mult);
     }
 
     click_count.innerHTML = ban_per.toString() + " Bananas Per Click"
@@ -74,7 +78,7 @@
     upgrade_button2.innerHTML = "2x - " + upgrade2_price;
 
     function BananaGain(t){
-        score += ban_per * mult;
+        score += ban_per*mult;
         score_count.innerHTML = score.toString() + " Bananas";
     }
 
@@ -83,6 +87,8 @@
         localStorage.setItem("ban_per",ban_per);
         localStorage.setItem("upgrade1_price",upgrade1_price);
         localStorage.setItem("upgrade2_price",upgrade2_price);
+        localStorage.setItem("upgrade3_price",upgrade3_price);
+        localStorage.setItem("mult",mult);
     }
 
     function Hov(t){
