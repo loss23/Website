@@ -39,7 +39,3 @@ function PU(){
 function EM(){
     window.location.href = "games/EM/build/index.html"
 }
-
-function UNO(){
-    window.location.href = "games/UNO/packages/unoenty/public/index.html"
-}
