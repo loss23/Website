@@ -23,3 +23,12 @@ function CC(){
 function BC(){
     window.location.href = "games/BC/BC.html"
 }
+
+function DW(){
+    window.location.href = "games/DW2019/index.html"
+}
+
+function JS(){
+    window.location.href = "games/JS2018/index.html"
+}
+
