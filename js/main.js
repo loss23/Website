@@ -41,5 +41,5 @@ function EM(){
 }
 
 function UNO(){
-    window.location.href = "games/UNO/packages/unoenty/public.index.html"
+    window.location.href = "games/UNO/packages/unoenty/public/index.html"
 }
