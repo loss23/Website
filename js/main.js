@@ -32,3 +32,10 @@ function JS(){
     window.location.href = "games/JS2018/index.html"
 }
 
+function PU(){
+    window.location.href = "games/PU/index.html"
+}
+
+function SWAG(){
+    window.location.href = "games/SWAG/src/index.html"
+}
