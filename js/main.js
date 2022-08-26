@@ -35,3 +35,7 @@ function JS(){
 function PU(){
     window.location.href = "games/PU/index.html"
 }
+
+function EM(){
+    window.location.href = "games/EM/build/index.html"
+}
