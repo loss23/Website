@@ -39,3 +39,7 @@ function PU(){
 function EM(){
     window.location.href = "games/EM/build/index.html"
 }
+
+function SLOPE(){
+    window.location.href = "games/SLOPE/index.html"
+}
